@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME | GUI TAVARES</title>
+    <link rel="stylesheet" href="styles/bio.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+      defer
+    ></script>
+    <script src="./scripts/index-page.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <a href="/index.html" class="header__logo-link">
+          <img
+            src="./assets/Logo/Logo-bandsite.svg"
+            alt="Bandiste logo"
+            class="header__logo-img"
+          />
+        </a>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item header__item--active">
+            <a
+              href="./index.html"
+              class="header__nav-link header__nav-link--active"
+              >Biography</a
+            >
+          </li>
+          <li class="header__item">
+            <a href="./pages/shows.html" class="header__nav-link">Shows</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero">
+      <h2 class="hero__title">GUI TAVARES</h2>
+    </section>
+    <main class="main">
+      <section class="about">
+        <h1 class="about__title">About Gui Tavares</h1>
+        <div class="about__wrap">
+          <div class="about__image-container">
+            <img
+              src="./assets/Images/965A3845b.jpg"
+              alt="Band Playing"
+              class="about__image"
+            />
+          </div>
+
+          <p class="about__subtitle">
+            Samba e a voz do meu pais, esta em tudo que se diz o mundo precisa
+            te encontrar! Canta, solta a voz para se ouvir, deixa o ceu
+            iluminar, salva o samba que chegar.
+          </p>
+          <p class="about__subtitle about__subtitle--slogan">
+            - Song Writter | Singer | Multi intrumentalist | Conductor | Gui
+            Tavares.
+          </p>
+          <h3 class="about__content-title">Gui Tavares</h3>
+          <div class="about__contents">
+            <p class="about__content about__content--top">
+              Gui Tavares is a Brazilian songwriter, and music professional
+              based in London who produces and coordinates many of his own
+              projects and shows, as well as working in partnership with other
+              individuals and organizations both in London and around the world.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
+              animi reiciendis earum. Vitae, asperiores voluptas doloribus,
+              illum aspernatur sequi laboriosam facere deserunt magnam nulla
+              dolore vel laudantium temporibus cupiditate eveniet.
+            </p>
+            <p class="about__content">
+              From there, the band has soared, gaining international recognition
+              and ranking in the top 10 on the Poster Charts. New fans
+              immediately fell in love with the band’s original and organic
+              attitude, solidifying their place as one of the hottest and
+              fastest up and coming acts of this century. Fans affectionately
+              refer to themselves as “The Hive” and are drawn to their candid
+              and authentic performances on stage. The Bees Knees are currently
+              recording their second studio album, looking to be released in
+              early 2024.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="gallery">
+        <h2 class="gallery__title">Photo Gallery</h2>
+        <div class="gallery__wrap">
+          <div class="gallery__pics">
+            <img
+              src="./assets/Images/Filo + Gui studio.png"
+              alt="Filo and Gui in studio"
+              class="gallery__img"
+            />
+            <img
+              src="./assets/Images/Gui Tavares - Jazz Cafe 01.png"
+              alt="girl wearing sunglasses"
+              class="gallery__img"
+            />
+            <img
+              src="./assets/Images/IMG-20190429-WA0003.jpg"
+              alt="crowd hands up"
+              class="gallery__img"
+            />
+
+            <img
+              src="./assets/Images/IMG-20190429-WA0009.jpg"
+              alt="Girl's back"
+              class="gallery__img"
+            />
+
+            <img
+              src="./assets/Images/IMG-20190429-WA0004.jpg"
+              alt="Stage effect"
+              class="gallery__img"
+            />
+            <img
+              src="./assets/Images/IMG-20190429-WA0018.jpg"
+              alt="Confetti over crowd"
+              class="gallery__img"
+            />
+
+            <img
+              src="./assets/Images/Ivan Lins - Lucia Viola - Gui.jpg"
+              alt="Crowd in the club"
+              class="gallery__img"
+            />
+            <img
+              src="./assets/Images/IMG-20190429-WA0022.jpg"
+              alt="Dj Pickup"
+              class="gallery__img"
+            />
+            <img
+              src="./assets/Images/IMG-20190429-WA0013.jpg"
+              alt="Singer at stage"
+              class="gallery__img"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="comments">
+        <h2 class="comments__title">Join the Conversation</h2>
+        <form class="comments__form">
+          <img
+            src="./assets/Images/HeadShot.png"
+            alt="Mohan-Murge-headshot"
+            class="comments__img"
+          />
+          <div class="comments__box">
+            <label class="comments__name" for="name">NAME</label>
+            <input
+              class="comments__input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+            />
+            <label class="comments__comment-box" for="comment">COMMENT</label>
+            <textarea
+              class="comments__input comments__input--text"
+              id="comment"
+              name="comment"
+              placeholder="Add a new comment"
+            ></textarea>
+            <button type="submit" class="comments__btn">COMMENT</button>
+          </div>
+        </form>
+        <div class="comments-list" id="comments-list"></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__head">
+        <div class="footer__head-title">
+          <h2 class="footer__title">Get in Touch</h2>
+        </div>
+        <div class="footer__head-icons">
+          <a
+            href="https://www.instagram.com/gui_tavares_music/"
+            class="footer__head-icon-link"
+          >
+            <img
+              class="footer__icon"
+              src="./assets/Icons/SVG/Icon-instagram.svg"
+              alt="Instagram logo"
+            />
+          </a>
+          <a
+            href="https://www.facebook.com/guitavaresmusic/"
+            class="footer__head-icon-link"
+          >
+            <img
+              src="./assets/Icons/SVG/Icon-facebook.svg"
+              alt="Facebook logo"
+              class="footer__icon"
+            />
+          </a>
+          <a href="https://x.com/" class="footer__head-icon-link">
+            <img
+              src="./assets/Icons/SVG/Icon-twitter.svg"
+              alt="Twiter Logo "
+              class="footer__icon"
+            />
+          </a>
+        </div>
+        <div class="footer__head-img">
+          <a href="./index.html" class="footer__head-img-link">
+            <img
+              src="./assets/Logo/Logo-bandsite.svg"
+              alt="Bandsite Logo"
+              class="footer__img footer__img--head"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="footer__info-wrap">
+        <div class="footer__info">
+          <p class="footer__subtitle">
+            <strong>Bees Knees Management</strong>
+          </p>
+          <p>503 Broadway Penthouse,</p>
+          <p>New York, NY 10012, USA</p>
+          <a href="mailto:info@thebeesknees.com" class="footer__email"
+            >info@thebeesknees.com</a
+          >
+        </div>
+        <div class="footer__info">
+          <p class="footer__subtitle">
+            <strong>Limitless Artist Group</strong>
+          </p>
+          <p>Booking Agent for</p>
+          <p>US / South America / Japan</p>
+          <a href="mailto:bookings@limitlessag.com" class="footer__email"
+            >bookings@limitlessag.com</a
+          >
+        </div>
+        <div class="footer__info">
+          <p class="footer__subtitle">
+            <strong>ARCH Entertainment</strong>
+          </p>
+          <p>Booking Agent for</p>
+          <p>UK / EU / AU</p>
+          <a href="mailto:bookings@archentertainment.com" class="footer__email">
+            bookings@archentertainment.com
+          </a>
+        </div>
+      </div>
+      <div class="footer__img-wrap">
+        <a href="./index.html" class="footer__img-link">
+          <img
+            src="./assets/Logo/Logo-bandsite.svg"
+            alt="Bandsite Logo"
+            class="footer__img"
+          />
+        </a>
+      </div>
+      <p class="footer__text">
+        Copyright Gui Tavares © 2024 All Rights Reserved.
+      </p>
+    </footer>
+  </body>
+</html>

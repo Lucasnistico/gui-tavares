@@ -1,0 +1,491 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+@use "./partials/typography" as *;
+@use "./partials/resets";
+
+.header {
+  background-color: $secundary-color;
+  gap: 1rem;
+
+  &__logo {
+    padding: 1rem 0;
+    margin-left: 1rem;
+    @include flex-center;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+
+    @include tablet-and-desktop {
+      width: 20%;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $divider-color;
+      width: 50%;
+      padding-bottom: 0.5rem;
+
+      &--active {
+        color: white;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    flex-grow: 1;
+    list-style: none;
+    padding-bottom: 1rem;
+
+    &--active {
+      border-bottom: 2px solid white;
+    }
+  }
+
+  @include tablet-and-desktop {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  @include desktop {
+    .header__nav-list {
+      justify-content: space-between;
+    }
+  }
+}
+.hero {
+  background-image: url(../assets/Images/965A3971.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  background-color: rgba(50, 50, 50, 50);
+  background-blend-mode: overlay;
+  @include tablet-and-desktop {
+    height: 80vh;
+  }
+  @include desktop {
+    height: 70vh;
+  }
+
+  &__title {
+    @include MobileHeader;
+
+    @include tablet-and-desktop {
+      @include DesktabHeader;
+    }
+  }
+
+  &__text {
+    font-size: $font-size-body;
+  }
+
+  @include tablet-and-desktop {
+    padding: 4rem;
+    height: 60vh;
+  }
+
+  @include desktop {
+    padding: 3rem;
+    text-align: left;
+    height: 70vh;
+  }
+}
+.about {
+  color: $secundary-color;
+  padding: 1rem;
+
+  &__image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__wrap {
+    width: 90%;
+    margin: 0 1rem;
+
+    @include tablet-and-desktop {
+      width: 60%;
+      margin: 1rem 5rem;
+    }
+    @include desktop {
+      margin: auto;
+    }
+  }
+
+  &__title {
+    padding: 1rem 0 0 1rem;
+    @include MobileHeader;
+
+    @include tablet-and-desktop {
+      @include DesktabHeader;
+      padding-top: 2.5rem;
+      margin-left: 2.5rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+    @include tablet-and-desktop {
+      height: 20rem;
+      width: 90%;
+      margin-bottom: 1.5rem;
+    }
+    @include desktop {
+      height: 30rem;
+      width: 90%;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: $font-size-body;
+    margin-bottom: 1rem;
+
+    @include tablet-and-desktop {
+      margin: 0 2rem 1rem 2.7rem;
+      font-size: 1.2rem;
+
+      &--slogan {
+        font-size: $font-size-body;
+        margin-bottom: 3rem;
+      }
+    }
+    @include desktop {
+      width: 90%;
+      margin-left: 3rem;
+    }
+  }
+
+  &__contents {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+
+    @include tablet-and-desktop {
+      flex-direction: row;
+      margin: 0 3rem 0 3rem;
+    }
+    @include desktop {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__content-title {
+    margin-bottom: 1rem;
+
+    @include tablet-and-desktop {
+      margin: 0 0 1rem 3rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__content {
+    font-size: $font-size-body;
+    margin-bottom: 1rem;
+
+    &--top {
+      margin-right: 1.5rem;
+    }
+  }
+}
+.gallery {
+  background-color: $bg-color-alternative;
+  padding: 2rem;
+  margin: 0 auto;
+
+  &__title {
+    @include MobileHeader;
+    color: $secundary-color;
+    padding: 0.5rem 0 0.5rem 1rem;
+
+    @include tablet-and-desktop {
+      padding: 1rem 0 2rem 1rem;
+      font-size: $font-size-header;
+    }
+    @include desktop {
+      padding: 2rem 0 2rem 3rem;
+    }
+  }
+
+  &__wrap {
+    margin: 0 1rem;
+  }
+
+  &__pics {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include tablet-and-desktop {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  &__img {
+    width: 100%;
+
+    @include tablet-and-desktop {
+      width: 30%;
+    }
+
+    @include desktop {
+      @include grayscale-hover(0.1s);
+    }
+  }
+}
+.comments {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1.25rem;
+  background-color: $primary-color;
+  color: $secundary-color;
+
+  @include tablet-and-desktop {
+    max-width: none;
+    width: 80%;
+  }
+
+  @include desktop {
+    max-width: 500px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: $font-size-subheader;
+    color: $secundary-color;
+    @include tablet-and-desktop {
+      text-align: start;
+      @include DesktabHeaderB;
+    }
+  }
+  &__img {
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 50%;
+    border-right: 1rem;
+    margin: 1.8rem 1rem 0 0;
+    @include tablet-and-desktop {
+      height: 4.5rem;
+      width: 4.5rem;
+    }
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    @include ButtonsnLabels;
+    margin-top: 1rem;
+  }
+
+  &__name {
+    @include ButtonsnLabels;
+  }
+
+  &__comment-box {
+    margin-top: 0.5rem;
+  }
+  &__input {
+    background-color: $bg-color-alternative;
+    border-radius: $CTAradius;
+    height: 2rem;
+    &--text {
+      height: 5rem;
+    }
+  }
+
+  &__btn {
+    background: $CTAcolor;
+    color: $CTAtextColor;
+    height: $CTAheight;
+    width: $CTAwidht;
+    padding: $CTApadding;
+    border-radius: $CTAradius;
+    font-size: $CTAfont-size;
+    margin-top: 1rem;
+
+    &:hover {
+      background-color: $CTAhoverColor;
+    }
+    @include tablet-and-desktop {
+      width: 30%;
+      align-self: flex-end;
+    }
+    @include desktop {
+      width: 40%;
+    }
+  }
+}
+.comment {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid $divider-color;
+  margin: 1rem 0;
+
+  &__avatar {
+    background-color: $secundary-text-color;
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 1rem 0;
+  }
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  &__wrapper {
+    width: 90%;
+  }
+  &__date {
+    color: $secundary-text-color;
+  }
+}
+.footer {
+  background-color: $secundary-color;
+  color: $primary-color;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem;
+
+  @include desktop {
+    margin-top: 2rem;
+  }
+  &__head {
+    @include tablet-and-desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    @include desktop {
+      width: 100%;
+      margin-left: 0.5rem;
+    }
+  }
+  &__head-title {
+    width: 100%;
+    @include tablet-and-desktop {
+      width: 70%;
+    }
+  }
+  &__head-img {
+    width: 100%;
+    @include tablet-and-desktop {
+      width: 70%;
+    }
+  }
+  &__head-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    @include tablet-and-desktop {
+      width: 70%;
+    }
+    @include desktop {
+      width: 70%;
+    }
+  }
+  &__icon {
+    @include tablet-and-desktop {
+      height: 1.5rem;
+    }
+  }
+  &__title {
+    margin-bottom: 1rem;
+
+    @include tablet-and-desktop {
+      font-size: $font-size-header;
+    }
+  }
+  &__img {
+    width: 10rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    @include tablet-and-desktop {
+      display: none;
+    }
+
+    &--head {
+      display: none;
+      @include tablet-and-desktop {
+        display: flex;
+        width: 8rem;
+        margin-right: 1.5rem;
+      }
+      @include desktop {
+        margin-right: 2rem;
+      }
+    }
+  }
+  &__info-wrap {
+    @include tablet-and-desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include desktop {
+      margin-left: 0.5rem;
+    }
+  }
+  &__info {
+    margin: 0.5rem 0;
+    @include tablet-and-desktop {
+      width: 100%;
+    }
+    @include desktop {
+      width: 100%;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 0.7rem;
+    margin-top: 1.5rem;
+  }
+  &__text {
+    font-size: 0.6rem;
+    color: $primary-color;
+    padding-top: 1rem;
+    @include desktop {
+      margin-left: 0.5rem;
+    }
+  }
+  &__email {
+    color: $primary-color;
+    text-decoration: none;
+    margin-top: 0.3rem;
+    display: inline-block;
+  }
+}
