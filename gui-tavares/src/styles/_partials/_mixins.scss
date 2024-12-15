@@ -1,0 +1,50 @@
+@use "./variables" as *;
+
+// Mixin for flexbox
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Mixin for responsive design
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin mobileL {
+  @media (max-width: $mobileL) {
+    @content;
+  }
+}
+
+// Mixin for button styles
+
+@mixin button {
+  color: rgb(255, 255, 255);
+  height: 2.5rem;
+  width: 100%;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  background: rgb(50, 50, 50);
+  padding: 0px 2rem;
+  border-radius: 0.25rem;
+  &:hover {
+    background: rgb(0, 0, 0);
+  }
+}

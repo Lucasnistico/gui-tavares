@@ -147,16 +147,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-.about__wrap {
-  width: 90%;
-  margin: 0 1rem;
-}
-@media screen and (min-width: 768px) {
-  .about__wrap {
-    width: 60%;
-    margin: 1rem 5rem;
-  }
-}
 @media screen and (min-width: 1280px) {
   .about__wrap {
     margin: auto;
@@ -198,7 +188,7 @@ body {
 .about__subtitle {
   font-weight: 600;
   font-size: 0.875rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
   .about__subtitle {
