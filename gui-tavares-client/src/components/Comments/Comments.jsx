@@ -37,7 +37,6 @@ export default function Comments() {
             placeholder="Add a new comment"
           ></textarea>
 
-          {/* Rating Section */}
           <div className="comments__rating">
             <label className="comments__label">RATING</label>
             <Rating

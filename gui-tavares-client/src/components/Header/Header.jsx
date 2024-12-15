@@ -16,10 +16,17 @@ export default function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <header className="header">
       <div className="header__title-wrap">
-        <Link to="/" className="header__title">
+        <Link to="/" className="header__title" onClick={scrollToTop}>
           <img src={Logo} alt="Logo" className="header__logo" />
         </Link>
       </div>
@@ -37,19 +44,35 @@ export default function Header() {
               </div>
             }
           >
-            <Link to="/" className="header__nav-link">
+            <Link to="/" className="header__nav-link" onClick={scrollToTop}>
               Home
             </Link>
-            <Link to="/about" className="header__nav-link">
+            <Link
+              to="/about"
+              className="header__nav-link"
+              onClick={scrollToTop}
+            >
               About
             </Link>
-            <Link to="/shows" className="header__nav-link">
+            <Link
+              to="/shows"
+              className="header__nav-link"
+              onClick={scrollToTop}
+            >
               Shows
             </Link>
-            <Link to="/classes" className="header__nav-link">
+            <Link
+              to="/classes"
+              className="header__nav-link"
+              onClick={scrollToTop}
+            >
               Classes
             </Link>
-            <Link to="/bookings" className="header__nav-link">
+            <Link
+              to="/bookings"
+              className="header__nav-link"
+              onClick={scrollToTop}
+            >
               Bookings
             </Link>
           </Menu>
@@ -58,27 +81,43 @@ export default function Header() {
         <nav className="header__nav">
           <ul className="header__nav-list">
             <li className="header__nav-item">
-              <Link to="/" className="header__nav-link">
+              <Link to="/" className="header__nav-link" onClick={scrollToTop}>
                 Home
               </Link>
             </li>
             <li className="header__nav-item">
-              <Link to="/about" className="header__nav-link">
+              <Link
+                to="/about"
+                className="header__nav-link"
+                onClick={scrollToTop}
+              >
                 About
               </Link>
             </li>
             <li className="header__nav-item">
-              <Link to="/shows" className="header__nav-link">
+              <Link
+                to="/shows"
+                className="header__nav-link"
+                onClick={scrollToTop}
+              >
                 Shows
               </Link>
             </li>
             <li className="header__nav-item">
-              <Link to="/classes" className="header__nav-link">
+              <Link
+                to="/classes"
+                className="header__nav-link"
+                onClick={scrollToTop}
+              >
                 Classes
               </Link>
             </li>
             <li className="header__nav-item">
-              <Link to="/bookings" className="header__nav-link">
+              <Link
+                to="/bookings"
+                className="header__nav-link"
+                onClick={scrollToTop}
+              >
                 Bookings
               </Link>
             </li>

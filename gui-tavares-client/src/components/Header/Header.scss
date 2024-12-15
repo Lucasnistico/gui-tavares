@@ -35,8 +35,7 @@
     &-list {
       display: flex;
       list-style: none;
-      margin: 0;
-      padding: 0;
+      margin-right: 2.5rem;
 
       @include mobile {
         display: none;

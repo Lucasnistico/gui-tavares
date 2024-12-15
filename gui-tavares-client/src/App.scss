@@ -1,4 +1,9 @@
+@use "./styles/_partials/global.scss" as *;
+
 #root {
   text-align: center;
   padding-top: 5rem;
+
+  @include desktop {
+  }
 }
