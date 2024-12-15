@@ -1,0 +1,7 @@
+@use "../../styles/_partials/global.scss" as *;
+
+.about {
+  &__wrap {
+    height: 100vh;
+  }
+}

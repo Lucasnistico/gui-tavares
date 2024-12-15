@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Classes from "./pages/Classes/Classes.jsx";
 import Bookings from "./pages/Bookings/Bookings.jsx";
 import Payment from "./pages/Payment/Payment.jsx";
+import PhotoPage from "./pages/PhotoPage/PhotoPage.jsx";
 import NotFound from "./pages/NotFound/NotFound.jsx";
 import "./styles/_partials/global.scss";
 
@@ -23,9 +24,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/shows" element={<Shows />} />
-          <Route path="/contact" element={<Classes />} />
+          <Route path="/classes" element={<Classes />} />
           <Route path="/bookings" element={<Bookings />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/photo" element={<PhotoPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

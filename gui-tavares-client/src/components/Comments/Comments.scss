@@ -1,0 +1,92 @@
+@use "../../styles/_partials/global.scss" as *;
+
+.comments {
+  padding: 2rem 0;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.8rem;
+  }
+
+  &__label {
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: bold;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+
+    &:focus {
+      border-color: #535bf2;
+    }
+
+    &--text {
+      resize: vertical;
+      min-height: 120px;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .dv-star-rating {
+      font-size: 1.5rem;
+      color: #ffcc00;
+    }
+  }
+
+  &__btn {
+    align-self: flex-start;
+    background-color: #535bf2;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+
+    &:hover {
+      background-color: #4348d0;
+    }
+  }
+
+  .comments-list {
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+  }
+}

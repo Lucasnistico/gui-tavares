@@ -1,42 +1,61 @@
 import "./Comments.scss";
-import React from "react";
+import React, { useState } from "react";
+import Avatar from "../../assets/Images/avatar.png";
+import Rating from "react-rating-stars-component";
 
 export default function Comments() {
+  const [rating, setRating] = useState(0);
+
+  const handleRating = (newRating) => {
+    setRating(newRating);
+  };
+
   return (
-    <section class="comments">
-      <h2 class="comments__title">Join the Conversation</h2>
-      <form class="comments__form">
-        <img
-          src="./assets/Images/HeadShot.png"
-          alt="Mohan-Murge-headshot"
-          class="comments__img"
-        />
-        <div class="comments__box">
-          <label class="comments__name" for="name">
+    <section className="comments">
+      <h2 className="comments__title">Join the Conversation</h2>
+      <form className="comments__form">
+        <img src={Avatar} alt="User Avatar" className="comments__img" />
+        <div className="comments__box">
+          <label className="comments__label" htmlFor="name">
             NAME
           </label>
           <input
-            class="comments__input"
+            className="comments__input"
             type="text"
             id="name"
             name="name"
             placeholder="Enter your name"
           />
-          <label class="comments__comment-box" for="comment">
+
+          <label className="comments__label" htmlFor="comment">
             COMMENT
           </label>
           <textarea
-            class="comments__input comments__input--text"
+            className="comments__input comments__input--text"
             id="comment"
             name="comment"
             placeholder="Add a new comment"
           ></textarea>
-          <button type="submit" class="comments__btn">
+
+          {/* Rating Section */}
+          <div className="comments__rating">
+            <label className="comments__label">RATING</label>
+            <Rating
+              count={5}
+              value={rating}
+              size={24}
+              onChange={handleRating}
+              activeColor="#ffd700"
+            />
+          </div>
+
+          <button type="submit" className="comments__btn">
             COMMENT
           </button>
         </div>
       </form>
-      <div class="comments-list" id="comments-list"></div>
+
+      <div className="comments-list" id="comments-list"></div>
     </section>
   );
 }

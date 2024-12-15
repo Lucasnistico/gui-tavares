@@ -2,6 +2,7 @@ import "./Header.scss";
 import { Link } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
 import { useState, useEffect } from "react";
+import Logo from "../../assets/Logo/logo2.svg";
 
 export default function Header() {
   const [isMobile, setIsMobile] = useState(false);
@@ -18,9 +19,10 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header__title-wrap">
-        <h1 className="header__title">Gui Tavares</h1>
+        <Link to="/" className="header__title">
+          <img src={Logo} alt="Logo" className="header__logo" />
+        </Link>
       </div>
-
       {isMobile ? (
         <>
           <Menu
@@ -50,9 +52,6 @@ export default function Header() {
             <Link to="/bookings" className="header__nav-link">
               Bookings
             </Link>
-            <Link to="/contact" className="header__nav-link">
-              Contact
-            </Link>
           </Menu>
         </>
       ) : (
@@ -81,11 +80,6 @@ export default function Header() {
             <li className="header__nav-item">
               <Link to="/bookings" className="header__nav-link">
                 Bookings
-              </Link>
-            </li>
-            <li className="header__nav-item">
-              <Link to="/contact" className="header__nav-link">
-                Contact
               </Link>
             </li>
           </ul>

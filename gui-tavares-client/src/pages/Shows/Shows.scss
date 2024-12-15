@@ -1,0 +1,77 @@
+@use "../../styles/_partials/global.scss" as *;
+
+.shows {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  &__description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+
+  &__view-toggle {
+    margin-bottom: 2rem;
+
+    .shows__view-btn {
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      font-size: 1rem;
+      color: white;
+      background-color: #535bf2;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &.active {
+        background-color: #4342c1;
+      }
+
+      &:hover {
+        background-color: #4342c1;
+      }
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    gap: 1.5rem;
+
+    &--grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    &--list {
+      display: block;
+
+      .shows__photo {
+        margin: 0 auto 1.5rem auto;
+        max-width: 600px;
+      }
+    }
+  }
+
+  &__photo {
+    overflow: hidden;
+    border-radius: 8px;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
