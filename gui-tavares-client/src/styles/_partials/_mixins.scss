@@ -1,0 +1,60 @@
+@use "./variables" as *;
+
+// Mixin for flexbox
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Mixin for responsive design
+
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+// Mixin for button styles
+
+@mixin button {
+  color: rgb(255, 255, 255);
+  height: 2.5rem;
+  width: 100%;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  background: rgb(50, 50, 50);
+
+  border-radius: 0.25rem;
+  &:hover {
+    background: rgb(0, 0, 0);
+  }
+}
+
+@mixin button-2 {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}

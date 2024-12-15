@@ -1,0 +1,31 @@
+@use "../../styles/_partials/global.scss" as *;
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  padding-left: 40px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: repeat;
+  background-image: url("../../assets/Images/Hero.jpg");
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  &__btn {
+    max-width: 50%;
+    border: 1px solid #535bf2;
+    &:hover {
+      background: 1px solid white;
+    }
+  }
+}

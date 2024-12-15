@@ -1,0 +1,96 @@
+import "./Header.scss";
+import { Link } from "react-router-dom";
+import { slide as Menu } from "react-burger-menu";
+import { useState, useEffect } from "react";
+
+export default function Header() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
+    <header className="header">
+      <div className="header__title-wrap">
+        <h1 className="header__title">Gui Tavares</h1>
+      </div>
+
+      {isMobile ? (
+        <>
+          <Menu
+            right
+            width={"250px"}
+            className="header__menu"
+            customBurgerIcon={
+              <div className="header__burger-icon">
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+              </div>
+            }
+          >
+            <Link to="/" className="header__nav-link">
+              Home
+            </Link>
+            <Link to="/about" className="header__nav-link">
+              About
+            </Link>
+            <Link to="/shows" className="header__nav-link">
+              Shows
+            </Link>
+            <Link to="/classes" className="header__nav-link">
+              Classes
+            </Link>
+            <Link to="/bookings" className="header__nav-link">
+              Bookings
+            </Link>
+            <Link to="/contact" className="header__nav-link">
+              Contact
+            </Link>
+          </Menu>
+        </>
+      ) : (
+        <nav className="header__nav">
+          <ul className="header__nav-list">
+            <li className="header__nav-item">
+              <Link to="/" className="header__nav-link">
+                Home
+              </Link>
+            </li>
+            <li className="header__nav-item">
+              <Link to="/about" className="header__nav-link">
+                About
+              </Link>
+            </li>
+            <li className="header__nav-item">
+              <Link to="/shows" className="header__nav-link">
+                Shows
+              </Link>
+            </li>
+            <li className="header__nav-item">
+              <Link to="/classes" className="header__nav-link">
+                Classes
+              </Link>
+            </li>
+            <li className="header__nav-item">
+              <Link to="/bookings" className="header__nav-link">
+                Bookings
+              </Link>
+            </li>
+            <li className="header__nav-item">
+              <Link to="/contact" className="header__nav-link">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      )}
+    </header>
+  );
+}
