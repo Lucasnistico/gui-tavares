@@ -33,14 +33,13 @@
     @include desktop {
       height: 12vh;
       width: auto;
-      margin: 0.5rem 0 0 1.5rem;
+      margin: 0.5rem 0 0 1rem;
     }
   }
 
   @include desktopL {
     height: 12vh;
     width: 100%;
-    padding: rem 2rem;
   }
 
   &__mobile-wrap {
@@ -84,6 +83,7 @@
       font-size: 1.2rem;
 
       &:hover {
+        animation: pop 0.3s ease-in-out;
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 5px;
       }
@@ -111,11 +111,6 @@
       text-decoration: none;
       color: white;
       padding: 0.5rem 1.5rem;
-
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 5px;
-      }
     }
   }
 }

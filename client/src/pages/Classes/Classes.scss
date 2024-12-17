@@ -48,6 +48,9 @@
         font-size: 1.1rem;
         margin-bottom: 1rem;
         text-align: left;
+        &:hover {
+          animation: pop 1s ease-in-out;
+        }
 
         strong {
           color: #535bf2;
@@ -63,6 +66,9 @@
 
     .classes__btn {
       @include purple-button;
+      &:hover {
+        animation: pop 2s ease-in-out;
+      }
     }
   }
 }

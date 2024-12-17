@@ -120,5 +120,8 @@
   &__btn {
     @include purple-button;
     margin: 2rem 0;
+    &:hover {
+      animation: pop 2s ease-in-out;
+    }
   }
 }

@@ -10,6 +10,20 @@
   text-align: center;
   background-color: #181818;
   color: #ffffff;
+  margin-top: 6rem;
+
+  @include tablet {
+    margin-top: 8rem;
+  }
+
+  @include desktop {
+    padding: 20px 10rem;
+  }
+
+  @include desktopL {
+    margin-top: 7rem;
+    padding: 20px 15rem;
+  }
 
   &__title {
     margin-bottom: 1rem;
@@ -23,60 +37,14 @@
     color: #cccccc;
   }
 
-  &__list {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 600px;
-
-    &__item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1.5rem;
-      background-color: #222222;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-
-      &-title {
-        margin-bottom: 0.5rem;
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: #ffffff;
-      }
-
-      &-subtitle {
-        margin-bottom: 0.5rem;
-        font-size: 1.1rem;
-        color: #dddddd;
-      }
-
-      &-text {
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
-        line-height: 1.4;
-        color: #bbbbbb;
-      }
-
-      &-button {
-        margin-top: 1rem;
-        padding: 0.5rem 1.5rem;
-        background-color: #333333;
-        color: #ffffff;
-        font-size: 1rem;
-        font-weight: bold;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-          background-color: #444444;
-        }
-      }
-    }
+  &__btn {
+    @include button;
+    animation: pop 3s ease-in;
+    margin: 1rem 0 2rem 0rem;
+    max-width: 50%;
+  }
+  &__slots {
+    @include flex-column;
+    gap: 0.5rem;
   }
 }

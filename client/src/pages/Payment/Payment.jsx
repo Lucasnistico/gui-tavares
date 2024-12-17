@@ -63,11 +63,20 @@ export default function Payment() {
       <div className="payment__content">
         <h1 className="payment__title">Payment</h1>
         <p className="payment__subtitle">
-          Confirm your payment to proceed with booking.
+          Confirm your reservation with a small, £25.00 payment to proceed with
+          booking.
         </p>
         <Elements stripe={stripePromise}>
           <CheckoutForm />
         </Elements>
+      </div>
+      <div className="payment__warning">
+        <p className="payment__warning-text"></p>
+        Please do not refresh the page while processing payment!
+        <p className="payment__warning-text">
+          Please note you'll receive an email confirmation once payment is
+          successful and booking is confirmed.
+        </p>
       </div>
     </section>
   );

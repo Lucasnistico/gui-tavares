@@ -1,3 +1,5 @@
+@use "../../styles/_partials/global.scss" as *;
+
 .payment {
   display: flex;
   flex-direction: column;
@@ -8,6 +10,21 @@
   color: #ffffff;
   text-align: center;
   padding: 1rem;
+  margin-top: 11rem;
+
+  @include tablet {
+    margin-top: 7rem;
+  }
+
+  @include desktop {
+    margin-top: 6rem;
+    padding: 20px 10rem;
+  }
+
+  @include desktopL {
+    margin-top: 7rem;
+    padding: 20px 15rem;
+  }
 
   &__content {
     background-color: #222222;
@@ -74,5 +91,10 @@
     color: #00d084;
     font-size: 1rem;
     margin-top: 1rem;
+  }
+  &__warning {
+    color: #ff4d4f;
+    font-size: 1rem;
+    margin-top: 2rem;
   }
 }

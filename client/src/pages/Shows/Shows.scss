@@ -4,6 +4,20 @@
   padding: 3rem 1rem;
   background-color: #f9f9f9;
   text-align: center;
+  margin-top: 12rem;
+
+  @include tablet {
+    margin-top: 8rem;
+  }
+
+  @include desktop {
+    padding: 20px 10rem;
+  }
+
+  @include desktopL {
+    margin-top: 7rem;
+    padding: 20px 15rem;
+  }
 
   &__title {
     font-size: 2.5rem;
@@ -27,22 +41,9 @@
 
     .shows__view-btn,
     .shows__book-btn {
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      color: white;
-      background-color: #535bf2;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-
+      @include purple-button;
       &:hover {
-        background-color: #4342c1;
-      }
-
-      &.active {
-        background-color: #4342c1;
+        animation: pop 2s ease-in-out;
       }
     }
   }

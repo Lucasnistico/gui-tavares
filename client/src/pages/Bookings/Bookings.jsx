@@ -32,7 +32,7 @@ export default function Bookings() {
             Reserve a time slot after payment is processed...
           </p>
           <button className="bookings__btn" onClick={handlePayment}>
-            Proceed to Payment
+            Proceed to Payment!
           </button>
           <div className="bookings__slots">
             <h2>Available Slots!</h2>

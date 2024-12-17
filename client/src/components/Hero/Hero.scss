@@ -37,24 +37,16 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin: 1rem 1rem;
+    margin: 4rem 0rem 0rem 1rem;
     position: relative;
     z-index: 2;
   }
 
   &__btn {
+    @include button;
     max-width: 50%;
-    border: 1px solid #535bf2;
-    color: white;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-
     &:hover {
-      background: white;
-      color: #535bf2;
+      animation: pop 3s ease-in-out;
     }
   }
   &__player {
