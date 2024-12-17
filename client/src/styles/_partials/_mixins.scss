@@ -1,0 +1,113 @@
+@use "./variables" as *;
+
+// Mixin for flexbox
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Mixin for responsive design
+
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin desktopL {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+// Mixin for button styles
+
+@mixin button {
+  color: rgb(255, 255, 255);
+  height: 2.5rem;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 1rem;
+  background: rgb(50, 50, 50);
+  border: 1px solid #535bf2;
+  border-radius: 0.25rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    border: 1px solid #535bf2;
+    box-shadow: 0 0 5px #535bf2;
+    animation: border-glow 8s infinite linear;
+    pointer-events: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(0deg);
+      width: 0.825rem;
+      height: 0.825rem;
+      background-color: #535bf2;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #535bf2;
+      animation: rotate-point 8s infinite linear;
+    }
+  }
+
+  &:hover {
+    background: rgb(0, 0, 0);
+  }
+}
+
+@mixin button-2 {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+@mixin purple-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: #535bf2;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #4342c1;
+  }
+}

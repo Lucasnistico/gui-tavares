@@ -1,0 +1,82 @@
+@use "../../styles/_partials/global.scss" as *;
+
+.bookings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1rem;
+  text-align: center;
+  background-color: #181818;
+  color: #ffffff;
+
+  &__title {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: #cccccc;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 600px;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+      background-color: #222222;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+      &-title {
+        margin-bottom: 0.5rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #ffffff;
+      }
+
+      &-subtitle {
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+        color: #dddddd;
+      }
+
+      &-text {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        line-height: 1.4;
+        color: #bbbbbb;
+      }
+
+      &-button {
+        margin-top: 1rem;
+        padding: 0.5rem 1.5rem;
+        background-color: #333333;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #444444;
+        }
+      }
+    }
+  }
+}
