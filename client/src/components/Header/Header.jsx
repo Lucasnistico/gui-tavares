@@ -107,6 +107,16 @@ export default function Header() {
               >
                 Bookings
               </Link>
+              <Link
+                to="/contact"
+                className="header__nav-link"
+                onClick={() => {
+                  closeMenu();
+                  scrollToTop();
+                }}
+              >
+                Contact Me
+              </Link>
             </Menu>
           </div>
         </div>
@@ -156,6 +166,15 @@ export default function Header() {
                   onClick={scrollToTop}
                 >
                   Bookings
+                </Link>
+              </li>
+              <li className="header__nav-item">
+                <Link
+                  to="/contact"
+                  className="header__nav-link"
+                  onClick={scrollToTop}
+                >
+                  Contact Me
                 </Link>
               </li>
             </ul>

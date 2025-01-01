@@ -1,5 +1,6 @@
 import "./About.scss";
 import Hero from "../../components/Hero/Hero.jsx";
+import Records from "../../components/Records/Records.jsx";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo/guiTavares.svg";
 
@@ -29,6 +30,9 @@ export default function About() {
             Gui Tavares: One of the faces of Brazilian music in the UK to the
             world!{" "}
           </p>
+        </div>
+        <div className="about__records">
+          <Records />
         </div>
         <div className="about__contents">
           <div className="about__content about__content--top">

@@ -10,7 +10,9 @@ export default function Footer() {
       <footer className="footer">
         <nav className="footer__nav">
           <div className="footer__title-wrap">
-            <h2 className="footer__title">Get in Touch</h2>
+            <Link to="/contact" className="footer__logo">
+              <h2 className="footer__title">Get in Touch</h2>
+            </Link>
           </div>
           <div className="footer__head-icons">
             <Link
@@ -65,13 +67,10 @@ export default function Footer() {
               to="mailto:info@guitavares.co.uk"
               className="footer__info-email"
             >
-              info@guitavares.com
+              contact@guitavares.com
             </Link>
           </div>
         </section>
-        <p className="footer__text">
-          Copyright Gui Tavares © 2024 All Rights Reserved.
-        </p>
       </footer>
     </>
   );

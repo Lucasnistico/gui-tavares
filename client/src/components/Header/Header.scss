@@ -99,7 +99,7 @@
     &-list {
       display: flex;
       list-style: none;
-      margin-right: 2.5rem;
+      margin-right: 1.5rem;
     }
 
     &-item {
@@ -110,7 +110,16 @@
       @include button;
       text-decoration: none;
       color: white;
-      padding: 0.5rem 1.5rem;
+      padding: 0.5rem 1rem;
     }
+  }
+}
+.header__logo {
+  @include desktop {
+    height: 12vh;
+  }
+
+  @include desktopL {
+    height: 8vh;
   }
 }

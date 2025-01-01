@@ -5,7 +5,7 @@ import Hero from "../../components/Hero/Hero.jsx";
 
 export default function PhotoPage() {
   const location = useLocation();
-  const photo = location.state?.photo; // Recebe a foto passada pelo state
+  const photo = location.state?.photo;
 
   return (
     <>

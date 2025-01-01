@@ -12,7 +12,7 @@ export default function Comments() {
 
   return (
     <section className="comments">
-      <h2 className="comments__title">Join the Conversation</h2>
+      <h2 className="comments__title">Join the Conversation!</h2>
       <form className="comments__form">
         <img src={Avatar} alt="User Avatar" className="comments__img" />
         <div className="comments__box">

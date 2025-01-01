@@ -22,20 +22,23 @@ export default function Classes() {
           </p>
           <ul className="classes__list">
             <li className="classes__item">
-              🎹 <strong>Piano Lessons</strong> – Master technique, chords, and
-              expressive playing.
+              🎸 <strong>Guitar Lessons</strong> – Learn acoustic or electric
+              guitar, from basic chords to advanced solos. You'll also learn how
+              to listen to music and play by ear.
             </li>
             <li className="classes__item">
-              🎸 <strong>Guitar Lessons</strong> – Learn acoustic or electric
-              guitar, from basic chords to advanced solos.
+              🎹 <strong>Piano Lessons</strong> – Master technique, chords, and
+              expressive playing. You'll also be able to perform your favorites.
             </li>
             <li className="classes__item">
               🎤 <strong>Singing Lessons</strong> – Find your voice with vocal
-              exercises, breathing techniques, and confidence-building.
+              exercises, breathing techniques, and confidence-building. you'll
+              be able to sing different styles and genres.
             </li>
             <li className="classes__item">
               🎼 <strong>Music Theory</strong> – Understand harmony, rhythm,
-              composition, and improvisation.
+              composition, and improvisation and apply this concepts to create
+              your own style.
             </li>
           </ul>
           <p className="classes__cta-text">
