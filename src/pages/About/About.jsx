@@ -17,7 +17,6 @@ export default function About() {
       <section className="about__wrap">
         <img src={Logo} alt="Gui Tavares" className="about__logo" />
         <div className="about__title-wrap">
-          <h3 className="about__title">Gui Tavares</h3>
           <p className="about__subtitle">
             Samba é a voz do meu país, está em tudo o que se diz. O mundo
             precisa te encontrar! Canta, solta a voz para se ouvir, deixa o céu
