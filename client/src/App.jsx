@@ -16,8 +16,6 @@ import ContactMe from "./pages/ContactMe/ContactMe.jsx";
 import "./styles/_partials/global.scss";
 
 export default function App() {
-  // const [count, setCount] = useState(0);
-
   return (
     <>
       <BrowserRouter>
@@ -30,7 +28,6 @@ export default function App() {
           <Route path="/bookings" element={<Bookings />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/photo" element={<PhotoPage />} />
-
           <Route path="/contact" element={<ContactMe />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
