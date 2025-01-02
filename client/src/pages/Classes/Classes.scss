@@ -2,8 +2,7 @@
 
 .classes {
   @include flex-center;
-  padding: 3rem 1rem;
-  background-color: #f9f9f9;
+  background-color: white;
   margin-top: 12rem;
 
   @include tablet {
@@ -21,60 +20,65 @@
   }
 
   &__content {
-    max-width: 800px;
+    width: 100%;
     text-align: center;
     color: #333;
 
-    .classes__title {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
+    @include desktopL {
+      padding: 0rem 5rem;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+  }
+
+  &__description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 2rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+
+  &__item {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    &:hover {
+      animation: pop 1s ease-in-out;
     }
 
-    .classes__description {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
+    strong {
+      color: #535bf2;
     }
 
-    .classes__list {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 2rem;
-
-      .classes__item {
-        font-size: 1.1rem;
-        margin-bottom: 1.5rem;
-        text-align: center;
-        &:hover {
-          animation: pop 1s ease-in-out;
-        }
-
-        strong {
-          color: #535bf2;
-        }
-
-        @include tablet {
-          padding: 0rem 5rem;
-        }
-
-        @include desktop {
-          padding: 0rem 3rem;
-        }
-      }
+    @include tablet {
+      padding: 0rem 5rem;
     }
 
-    .classes__cta-text {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #555;
+    @include desktop {
+      padding: 0rem 3rem;
     }
+  }
 
-    .classes__btn {
-      @include purple-button;
-      &:hover {
-        animation: pop 2s ease-in-out;
-      }
+  &__cta-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+
+  &__btn {
+    @include purple-button;
+    margin: 1rem;
+    &:hover {
+      animation: pop 2s ease-in-out;
     }
   }
 }

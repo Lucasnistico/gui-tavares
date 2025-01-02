@@ -11,7 +11,7 @@ import Bookings from "./pages/Bookings/Bookings.jsx";
 import Payment from "./pages/Payment/Payment.jsx";
 import PhotoPage from "./pages/PhotoPage/PhotoPage.jsx";
 import NotFound from "./pages/NotFound/NotFound.jsx";
-import Records from "./pages/Records/Records.jsx";
+
 import ContactMe from "./pages/ContactMe/ContactMe.jsx";
 import "./styles/_partials/global.scss";
 
@@ -30,7 +30,7 @@ export default function App() {
           <Route path="/bookings" element={<Bookings />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/photo" element={<PhotoPage />} />
-          <Route path="/records" element={<Records />} />
+
           <Route path="/contact" element={<ContactMe />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

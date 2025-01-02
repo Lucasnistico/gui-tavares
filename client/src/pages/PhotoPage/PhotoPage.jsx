@@ -29,13 +29,10 @@ export default function PhotoPage() {
           )}
         </div>
       </section>
-
-      <Comments />
-
-      <Hero
-        title="Relive the Music"
-        subtitle="Join Gui for his next show and experience the magic live!"
-      />
+      <div className="photo-page__comments">
+        <Comments />
+      </div>
+      <Hero />
     </>
   );
 }

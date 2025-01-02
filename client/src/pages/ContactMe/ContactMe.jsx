@@ -14,16 +14,16 @@ const ContactMe = () => {
 
     emailjs
       .sendForm(
-        "service_8aq9ixm", // Replace with your Service ID
-        "template_jwepmgn", // Replace with your Template ID
+        "service_8aq9ixm",
+        "template_jwepmgn",
         form.current,
-        "8oEES5JMMUIoD_n8j" // Replace with your Public Key
+        "8oEES5JMMUIoD_n8j"
       )
       .then(
         (result) => {
           console.log(result.text);
           setMessageSent(true);
-          setErrorMessage(""); // Clear error on success
+          setErrorMessage("");
         },
         (error) => {
           console.log(error.text);
@@ -74,14 +74,11 @@ const ContactMe = () => {
               placeholder="Write your message here"
               required
             ></textarea>
-
             <button type="submit" className="contact__btn">
               Send
             </button>
           </div>
         </form>
-
-        {/* Success and Error Messages */}
         {messageSent && (
           <p className="contact__success">
             🎵 Your message was sent successfully! We'll get back to you
@@ -89,6 +86,13 @@ const ContactMe = () => {
           </p>
         )}
         {errorMessage && <p className="contact__error">❌ {errorMessage}</p>}
+        <div className="contact__animation">
+          <iframe
+            src="https://lottie.host/embed/c7e5d275-8762-4793-8bf6-21e717327565/dqZ4wcd2rv.lottie"
+            title="Lottie Animation"
+            className="contact__iframe"
+          ></iframe>
+        </div>
       </section>
       <Hero />
     </>

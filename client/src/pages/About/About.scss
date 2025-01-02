@@ -4,12 +4,10 @@
   &__wrap {
     margin-top: 12rem;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    @include flex-column;
     align-items: center;
     padding: 1.25rem;
-    background: linear-gradient(to bottom, #f5f5f5, #ffffff);
+    background-color: white;
 
     @include tablet {
       margin-top: 8rem;
@@ -25,27 +23,16 @@
     }
   }
 
-  &__title {
-    &-wrap {
-      @include flex-column;
-      gap: 0.5rem;
-    }
-  }
-
   &__logo {
-    margin-top: 2rem;
+    margin-top: 1rem;
     max-height: 10rem;
     &:hover {
       animation: buzz 0.3s ease-in-out;
     }
-  }
 
-  &__content-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 10px;
-    text-align: center;
+    @include desktopL {
+      margin-top: 2.5rem;
+    }
   }
 
   &__subtitle {
@@ -54,8 +41,7 @@
     line-height: 1.6;
     color: #555;
     text-align: center;
-    margin-bottom: 15px;
-    padding: 0rem 1.5rem;
+    padding: 1rem 1.5rem;
 
     @include tablet {
       padding: 0rem 5rem;
@@ -70,6 +56,13 @@
       font-style: italic;
       font-size: 1rem;
       color: #777;
+    }
+  }
+
+  &__records {
+    max-width: 90%;
+    @include desktop {
+      max-width: 100%;
     }
   }
 
@@ -96,16 +89,16 @@
   &__content {
     flex: 1;
     min-width: 45%;
-    background: #f9f9f9;
+    background: white;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 
     &:hover {
       transform: scale(1.05);
-      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
     }
 
     font-size: 1rem;

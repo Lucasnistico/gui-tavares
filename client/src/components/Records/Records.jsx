@@ -14,10 +14,9 @@ export default function Records() {
     <section className="records">
       <div className="records__mobile-tablet">
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
+          modules={[Autoplay]}
           spaceBetween={20}
           slidesPerView={1}
-          navigation
           pagination={{ clickable: true }}
           autoplay={{ delay: 3500, disableOnInteraction: false }}
         >
@@ -33,14 +32,6 @@ export default function Records() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
-
-      <div className="records__desktop">
-        {images.map((img, index) => (
-          <div key={index} className="records__square">
-            <img className="records__img" src={img} alt={`Record ${index}`} />
-          </div>
-        ))}
       </div>
     </section>
   );

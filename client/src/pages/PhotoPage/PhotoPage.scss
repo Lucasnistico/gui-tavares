@@ -3,26 +3,69 @@
 .photo-page {
   text-align: center;
   padding: 2rem;
+  margin-top: 12rem;
+
+  @include tablet {
+    margin-top: 10rem;
+    padding: 2rem;
+  }
+
+  @include desktop {
+    margin-top: 8rem;
+    padding: 3rem 5rem;
+  }
+
+  @include desktopL {
+    padding: 3rem 5rem;
+  }
 
   &__title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
   }
 
   &__subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
   }
 
   &__image-container {
-    max-width: 800px;
+    max-width: 860px;
     margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
   }
 
   &__image {
-    width: 60%;
-    height: 60vh;
+    width: 100%;
+    height: auto;
     border-radius: 8px;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    @include mobile {
+      aspect-ratio: 4 / 3;
+      width: 90%;
+      height: auto;
+    }
+
+    @include tablet {
+      aspect-ratio: 16 / 10;
+      width: 80%;
+      height: auto;
+    }
+
+    @include desktop {
+      aspect-ratio: 16 / 9;
+      width: 60%;
+      height: 60%;
+    }
+  }
+
+  &__comments {
+    @include flex-column;
+    @include flex-center;
+    margin: 0;
   }
 }
