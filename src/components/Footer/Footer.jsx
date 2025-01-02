@@ -3,6 +3,9 @@ import "./Footer.scss";
 import Instagram from "../../assets/Icons/SVG/Icon-instagram.svg";
 import Facebook from "../../assets/Icons/SVG/Icon-facebook.svg";
 import Twitter from "../../assets/Icons/SVG/Icon-twitter.svg";
+import SoundCloud from "../../assets/Icons/SVG/soundcloud.svg";
+import Spotify from "../../assets/Icons/SVG/spotify.svg";
+import Youtube from "../../assets/Icons/SVG/youtube.svg";
 
 export default function Footer() {
   return (
@@ -15,6 +18,46 @@ export default function Footer() {
             </Link>
           </div>
           <div className="footer__head-icons">
+            <Link
+              to="#"
+              className="footer__head-icon-link"
+              onClick={() =>
+                window.open(
+                  "https://soundcloud.com/guitavares-127051646",
+                  "_blank"
+                )
+              }
+            >
+              <img
+                className="footer__icon"
+                src={SoundCloud}
+                alt="SoundCloud logo"
+              />
+            </Link>
+
+            <Link
+              to="#"
+              className="footer__head-icon-link"
+              onClick={() =>
+                window.open(
+                  "https://open.spotify.com/artist/6N8eZrTInoOzZPUHaows7c",
+                  "_blank"
+                )
+              }
+            >
+              <img className="footer__icon" src={Spotify} alt="Spotify logo" />
+            </Link>
+
+            <Link
+              to="#"
+              className="footer__head-icon-link"
+              onClick={() =>
+                window.open("https://www.youtube.com/@guitavares9536", "_blank")
+              }
+            >
+              <img className="footer__icon" src={Youtube} alt="Youtube logo" />
+            </Link>
+
             <Link
               to="#"
               className="footer__head-icon-link"
