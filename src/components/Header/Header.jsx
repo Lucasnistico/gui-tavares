@@ -50,6 +50,14 @@ export default function Header() {
         <div className="header__mobile-wrap">
           <div className="header__logo-container">
             <img src={LogoMobile} alt="Logo" className="header__logo" />
+            <div
+              className="header__hamburger"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
             <Menu
               right
               width={"250px"}

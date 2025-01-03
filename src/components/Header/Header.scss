@@ -9,6 +9,11 @@
   background-color: black;
   z-index: 1000;
 
+  @include desktopL {
+    height: 12vh;
+    width: 100%;
+  }
+
   @include mobile {
     &:hover {
       animation: buzz 0.3s ease-in-out;
@@ -17,9 +22,11 @@
 
   &__logo {
     object-fit: contain;
+
     &:hover {
       animation: buzz 0.3s ease-in-out;
     }
+
     @include mobile {
       height: 25vh;
       width: auto;
@@ -35,19 +42,13 @@
       width: auto;
       margin: 0.5rem 0 0 1rem;
     }
+
+    @include desktopL {
+      height: 8vh;
+    }
   }
 
-  @include desktopL {
-    height: 12vh;
-    width: 100%;
-  }
-
-  &__mobile-wrap {
-    @include flex-column;
-    @include flex-center;
-    width: 100%;
-  }
-
+  &__mobile-wrap,
   &__tablet-wrap {
     @include flex-column;
     @include flex-center;
@@ -113,13 +114,39 @@
       padding: 0.5rem 1rem;
     }
   }
-}
-.header__logo {
-  @include desktop {
-    height: 12vh;
-  }
 
-  @include desktopL {
-    height: 8vh;
+  &__hamburger {
+    display: none;
+
+    @include mobile {
+      display: block;
+      margin-top: 7.5rem;
+    }
+
+    @include tablet {
+      display: block;
+      margin-top: 5rem;
+    }
+
+    @include desktop {
+      display: none;
+    }
+
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 1002;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 4px;
+      background: white;
+      margin: 5px 0;
+      border-radius: 2px;
+    }
   }
 }
