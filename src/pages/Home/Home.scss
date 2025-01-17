@@ -2,4 +2,122 @@
 
 .home {
   margin-top: 5rem;
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    overflow-y: auto;
+
+    &__content {
+      background-color: #1c1c1c;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 800px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      color: #fff;
+      text-align: center;
+      position: relative;
+
+      h1 {
+        font-size: 2rem;
+        color: #fff;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: #bbb;
+        margin: 0.5rem 0;
+
+        &:last-of-type {
+          margin-bottom: 2rem;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-top: 1rem;
+      }
+    }
+
+    &__close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #b81b0e;
+      }
+    }
+
+    &__logo img {
+      max-width: 150px;
+      margin-bottom: 2rem;
+    }
+
+    &__details {
+      h1 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: normal;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .popup__tickets {
+        @include button;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    &__image {
+      margin-top: 1.5rem;
+
+      img {
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    &__spotify {
+      margin-top: 2rem;
+
+      iframe {
+        border: none;
+        border-radius: 12px;
+      }
+    }
+  }
 }
