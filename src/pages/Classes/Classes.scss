@@ -3,7 +3,7 @@
 .classes {
   @include flex-center;
   background-color: white;
-  margin-top: 12rem;
+  margin-top: 8rem;
 
   @include tablet {
     margin-top: 6rem;
@@ -23,6 +23,7 @@
     width: 100%;
     text-align: center;
     color: #333;
+    padding: 0 1rem;
 
     @include desktopL {
       padding: 0rem 5rem;

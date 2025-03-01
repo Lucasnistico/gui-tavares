@@ -28,7 +28,7 @@
     }
 
     @include mobile {
-      height: 25vh;
+      height: 15vh;
       width: auto;
     }
 
@@ -120,7 +120,7 @@
 
     @include mobile {
       display: block;
-      margin-top: 7.5rem;
+      margin-top: 3.5rem;
     }
 
     @include tablet {

@@ -80,7 +80,7 @@
 
   &__btn {
     @include button;
-    max-width: 50%;
+    max-width: 70%;
     &:hover {
       animation: pop 3s ease-in-out;
     }

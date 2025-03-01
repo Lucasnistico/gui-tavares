@@ -98,14 +98,6 @@ export default function Footer() {
                 alt="Facebook logo"
               />
             </Link>
-
-            <Link
-              to="#"
-              className="footer__head-icon-link"
-              onClick={() => window.open("https://x.com/", "_blank")}
-            >
-              <img className="footer__icon" src={Twitter} alt="Twitter logo" />
-            </Link>
           </div>
         </nav>
         <section className="footer__info-wrap">
