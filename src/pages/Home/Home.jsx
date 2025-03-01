@@ -19,7 +19,7 @@ export default function Home() {
           <div className="popup">
             <div className="popup__content">
               <button className="popup__close" onClick={closePopup}>
-                &times;
+                X Close pop-up
               </button>
               <div className="popup__logo">
                 <img src={Jazz} alt="Jazz Cafe Logo" />
