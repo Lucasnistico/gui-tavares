@@ -1,5 +1,4 @@
 import "./Shows.scss";
-import Hero from "../../components/Hero/Hero.jsx";
 import { useNavigate, Link } from "react-router-dom";
 
 import Photo2 from "../../assets/Images/gallery2.png";
@@ -69,7 +68,6 @@ export default function Shows() {
           Book Now!
         </Link>
       </section>
-      <Hero />
     </>
   );
 }

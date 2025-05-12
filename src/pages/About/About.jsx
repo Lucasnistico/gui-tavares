@@ -1,5 +1,5 @@
 import "./About.scss";
-import Hero from "../../components/Hero/Hero.jsx";
+
 import Records from "../../components/Records/Records.jsx";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo/guiTavares.svg";
@@ -63,7 +63,6 @@ export default function About() {
           Book Now!
         </Link>
       </section>
-      <Hero />
     </>
   );
 }

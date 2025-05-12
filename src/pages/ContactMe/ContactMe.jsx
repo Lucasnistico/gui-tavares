@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import "./ContactMe.scss";
 import Avatar from "../../assets/Images/avatar.png";
-import Hero from "../../components/Hero/Hero.jsx";
 import emailjs from "emailjs-com";
 
 const ContactMe = () => {
@@ -86,15 +85,14 @@ const ContactMe = () => {
           </p>
         )}
         {errorMessage && <p className="contact__error">❌ {errorMessage}</p>}
-        <div className="contact__animation">
+        {/* <div className="contact__animation">
           <iframe
             src="https://lottie.host/embed/c7e5d275-8762-4793-8bf6-21e717327565/dqZ4wcd2rv.lottie"
             title="Lottie Animation"
             className="contact__iframe"
           ></iframe>
-        </div>
+        </div> */}
       </section>
-      <Hero />
     </>
   );
 };

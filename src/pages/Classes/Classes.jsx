@@ -1,5 +1,4 @@
 import "./Classes.scss";
-import Hero from "../../components/Hero/Hero.jsx";
 import { Link } from "react-router-dom";
 
 export default function Classes() {
@@ -50,10 +49,6 @@ export default function Classes() {
           </Link>
         </div>
       </section>
-      <Hero
-        title="Learn Music with Gui Tavares"
-        subtitle="Unlock your musical talent with the best music teacher in London."
-      />
     </>
   );
 }

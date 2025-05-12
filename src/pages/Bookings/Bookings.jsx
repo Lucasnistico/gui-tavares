@@ -1,6 +1,5 @@
 import React from "react";
 import "./Bookings.scss";
-import Hero from "../../components/Hero/Hero.jsx";
 
 const Bookings = () => {
   return (
@@ -18,7 +17,6 @@ const Bookings = () => {
           </div>
         </div>
       </section>
-      <Hero />
     </>
   );
 };
