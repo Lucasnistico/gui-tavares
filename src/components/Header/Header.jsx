@@ -66,16 +66,6 @@ export default function Header() {
               onStateChange={handleMenuStateChange}
             >
               <Link
-                to="/"
-                className="header__nav-link"
-                onClick={() => {
-                  closeMenu();
-                  scrollToTop();
-                }}
-              >
-                Home
-              </Link>
-              <Link
                 to="/about"
                 className="header__nav-link"
                 onClick={() => {
