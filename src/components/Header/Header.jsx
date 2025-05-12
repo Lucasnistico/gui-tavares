@@ -1,7 +1,6 @@
 import "./Header.scss";
-import { Link } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import LogoDefault from "../../assets/Logo/logo2.svg";
 import LogoMobile from "../../assets/Logo/guiTavares.svg";
 
@@ -17,7 +16,8 @@ export default function Header() {
       setIsTablet(width >= 767 && width <= 1023);
     };
     handleResize();
-    window.addEventListener("resize", handleResize);
+
+    window.addEventListener("resize", handleResize, { passive: true });
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -29,12 +29,16 @@ export default function Header() {
     setMenuOpen(false);
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  const scrollToSection = useCallback((className) => {
+    const section = document.querySelector(`.${className}`);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      closeMenu();
+    }
+  }, []);
+
+  // Updated section list without 'hero'
+  const navSections = ["about", "shows", "classes", "bookings", "contact"];
 
   return (
     <header
@@ -45,136 +49,70 @@ export default function Header() {
           ? "header--tablet"
           : "header--desktop"
       }`}
+      role="banner"
     >
       {isMobile || isTablet ? (
         <div className="header__mobile-wrap">
           <div className="header__logo-container">
-            <img src={LogoMobile} alt="Logo" className="header__logo" />
-            <div
+            <img
+              src={LogoMobile}
+              alt="Gui Tavares Logo"
+              className="header__logo"
+            />
+            <button
               className="header__hamburger"
               onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
             >
               <span></span>
               <span></span>
               <span></span>
-            </div>
+            </button>
             <Menu
               right
               width={"250px"}
               className="header__menu"
               isOpen={menuOpen}
               onStateChange={handleMenuStateChange}
+              aria-label="Main navigation"
             >
-              <Link
-                to="/about"
-                className="header__nav-link"
-                onClick={() => {
-                  closeMenu();
-                  scrollToTop();
-                }}
-              >
-                About
-              </Link>
-              <Link
-                to="/shows"
-                className="header__nav-link"
-                onClick={() => {
-                  closeMenu();
-                  scrollToTop();
-                }}
-              >
-                Shows
-              </Link>
-              <Link
-                to="/classes"
-                className="header__nav-link"
-                onClick={() => {
-                  closeMenu();
-                  scrollToTop();
-                }}
-              >
-                Classes
-              </Link>
-              <Link
-                to="/bookings"
-                className="header__nav-link"
-                onClick={() => {
-                  closeMenu();
-                  scrollToTop();
-                }}
-              >
-                Bookings
-              </Link>
-              <Link
-                to="/contact"
-                className="header__nav-link"
-                onClick={() => {
-                  closeMenu();
-                  scrollToTop();
-                }}
-              >
-                Contact Me
-              </Link>
+              {navSections.map((section) => (
+                <a
+                  key={section}
+                  className="header__nav-link"
+                  onClick={() => scrollToSection(section)}
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </a>
+              ))}
             </Menu>
           </div>
         </div>
       ) : (
         <div className="header__desktop-wrap">
-          <Link to="/" className="header__title" onClick={scrollToTop}>
-            <img src={LogoDefault} alt="Logo" className="header__logo" />
-          </Link>
-          <nav className="header__nav">
+          <a
+            className="header__title"
+            onClick={() => scrollToSection("about")}
+            aria-label="Scroll to About"
+          >
+            <img
+              src={LogoDefault}
+              alt="Gui Tavares Logo"
+              className="header__logo"
+            />
+          </a>
+          <nav className="header__nav" role="navigation" aria-label="Main">
             <ul className="header__nav-list">
-              <li className="header__nav-item">
-                <Link to="/" className="header__nav-link" onClick={scrollToTop}>
-                  Home
-                </Link>
-              </li>
-              <li className="header__nav-item">
-                <Link
-                  to="/about"
-                  className="header__nav-link"
-                  onClick={scrollToTop}
-                >
-                  About
-                </Link>
-              </li>
-              <li className="header__nav-item">
-                <Link
-                  to="/shows"
-                  className="header__nav-link"
-                  onClick={scrollToTop}
-                >
-                  Shows
-                </Link>
-              </li>
-              <li className="header__nav-item">
-                <Link
-                  to="/classes"
-                  className="header__nav-link"
-                  onClick={scrollToTop}
-                >
-                  Classes
-                </Link>
-              </li>
-              <li className="header__nav-item">
-                <Link
-                  to="/bookings"
-                  className="header__nav-link"
-                  onClick={scrollToTop}
-                >
-                  Bookings
-                </Link>
-              </li>
-              <li className="header__nav-item">
-                <Link
-                  to="/contact"
-                  className="header__nav-link"
-                  onClick={scrollToTop}
-                >
-                  Contact Me
-                </Link>
-              </li>
+              {navSections.map((section) => (
+                <li key={section} className="header__nav-item">
+                  <a
+                    className="header__nav-link"
+                    onClick={() => scrollToSection(section)}
+                  >
+                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                  </a>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
