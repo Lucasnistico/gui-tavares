@@ -14,18 +14,8 @@
     width: 100%;
   }
 
-  @include mobile {
-    &:hover {
-      animation: buzz 0.3s ease-in-out;
-    }
-  }
-
   &__logo {
     object-fit: contain;
-
-    &:hover {
-      animation: buzz 0.3s ease-in-out;
-    }
 
     @include mobile {
       height: 15vh;
@@ -66,11 +56,6 @@
   &__menu {
     background-color: black;
     padding: 2rem 1rem;
-
-    .bm-cross {
-      width: 5rem;
-      height: 5rem;
-    }
 
     .bm-menu {
       padding: 0rem 2rem;

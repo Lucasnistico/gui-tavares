@@ -1,0 +1,20 @@
+@use "./styles/_partials/global.scss" as *;
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  background-color: #0b0c10;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
